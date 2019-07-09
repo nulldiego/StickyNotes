@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StickyNotes.AppResources.AppCommonStyles">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="AppBaseStyles.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--Estilos para componentes genéricos-->
+    <Style  TargetType="ActivityIndicator">
+        <Setter Property="Color" Value="{StaticResource ColorPrimary}" />
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource ButtonColor}" />
+        <Setter Property="TextColor" Value="{StaticResource ButtonTextColor}" />
+    </Style>
+</ResourceDictionary>

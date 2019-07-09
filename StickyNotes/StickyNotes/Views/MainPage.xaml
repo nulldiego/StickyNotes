@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StickyNotes.Views.MainPage"
+             Title="Sticky Notes"
+             x:Name="PostIt">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" Margin="20">
+            <Grid Padding="0" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <ListView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                      ItemsSource="{Binding TodoList, Mode=TwoWay}"
+                      VerticalOptions="StartAndExpand"
+                      HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Frame Style="{StaticResource ListFrameNoMargin}" IsClippedToBounds="False" >
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.RemoveClick, Source={x:Reference PostIt}}" CommandParameter="{Binding }"/>
+                                        </Frame.GestureRecognizers>
+                                        <Label Style="{StaticResource TitleItemList}" Text="{Binding Title}" />
+                                    </Frame>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Entry Grid.Row="1" Grid.Column="0" Placeholder="Note..." Text="{Binding Title}" />
+                <Button Grid.Row="1" Grid.Column="1" Command="{Binding AddClick}" Text="Add" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

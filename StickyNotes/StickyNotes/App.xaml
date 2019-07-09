@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StickyNotes.App"
+             xmlns:appResources="clr-namespace:StickyNotes.AppResources;assembly=StickyNotes">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <appResources:AppBaseStyles></appResources:AppBaseStyles>
+                <appResources:AppCommonStyles></appResources:AppCommonStyles>
+                <appResources:CommonStyles></appResources:CommonStyles>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        <!--<StyleSheet Source="/Assets/styles.css" />-->
+    </Application.Resources>
+</Application>

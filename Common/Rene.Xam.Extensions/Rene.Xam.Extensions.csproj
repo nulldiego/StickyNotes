@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Bootstrapping\Interfaces\INavigator.cs" />
+    <Compile Remove="Bootstrapping\Services\Navigator.cs" />
+    <Compile Remove="Extensions\NavigationExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Behaviors\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
+</Project>

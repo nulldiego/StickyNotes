@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StickyNotes.AppResources.AppBaseStyles">
+
+    <!-- Color primario -->
+    <Color x:Key="ColorPrimary">#0788B3</Color>
+
+    <!-- Botones -->
+    <Color x:Key="ButtonColor">#0788B3</Color>
+    <Color x:Key="ButtonTextColor">#FFFFFF</Color>
+
+    <!-- Menu -->
+    <Color x:Key="MenuBackground">#232D39</Color>
+    <Color x:Key="MenuTextColor">#FCFEFF</Color>
+    <Color x:Key="MenuSeparatorColor">#A8A8A8</Color>
+
+</ResourceDictionary>

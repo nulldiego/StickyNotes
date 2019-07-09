@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>    
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>pdbonly</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Common\Rene.Utils.Core\Rene.Utils.Core.csproj" />
+        <ProjectReference Include="..\..\Common\Rene.Xam.Extensions\Rene.Xam.Extensions.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="AppResources\AppBaseStyles.xaml.cs">
+        <DependentUpon>%(Filename)</DependentUpon>
+      </Compile>
+      <Compile Update="AppResources\AppCommonStyles.xaml.cs">
+        <DependentUpon>%(Filename)</DependentUpon>
+      </Compile>
+      <Compile Update="AppResources\CommonStyles.xaml.cs">
+        <DependentUpon>%(Filename)</DependentUpon>
+      </Compile>
+      <Compile Update="Views\MainPage.xaml.cs">
+        <DependentUpon>%(Filename)</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="App.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </None>
+      <None Update="AppResources\AppBaseStyles.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </None>
+      <None Update="AppResources\AppCommonStyles.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </None>
+      <None Update="Views\MainPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </None>
+    </ItemGroup>
+</Project>
